@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -131,5 +132,5 @@ LANGUAGE_COOKIE_NAME = 'django_press_language'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(THEME_FRONTEND_DIR, "design/frontend/default/static"),
+    os.path.join(THEME_FRONTEND_DIR, "static"),
 ]
