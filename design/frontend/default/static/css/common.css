@@ -20,23 +20,30 @@ body {
     font-size: 0.9rem;
     font-family: 'sans-serif';
 }
+
 /**
- * Page Header Nav
+ * Page Header
  */
-.main-nav{
+header .main-header {
     color: #f2f2f2;
     padding: 1rem 0 1rem 0;
-    margin:0 0 0.9rem 0;
     border-bottom: 1px solid currentColor;
 }
-.main-nav .logo-svg{
-    max-width: 50%;
+header .main-header .logo-svg{
+    width: 107px;
 }
-.main-nav .search-header .btn{
-    color:#fff;
-    background-color:#000;
+header .main-header .search-header{
+    position: relative;
 }
-
+header .main-header .search-header .form-control {
+    flex:9;
+}
+header .main-header .search-header .btn{
+    background: none;
+    position: absolute;
+    color: #3a3a3a;
+    right: 0.3rem;
+}
 
 /**
  * Page Footer

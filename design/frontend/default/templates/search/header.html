@@ -1,0 +1,19 @@
+{% load i18n %}
+<div class="form-group search-container">
+    <form class="form-inline mr-auto search-header" method="post" action="/search">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+            {{ field.label }} --   {{ field }}
+
+            {% for error_message in field.error_message %}
+                    {{ error_message }}
+            {% endfor %}
+
+        {% endfor %}
+
+        <input class="form-control" type="text" name="q" placeholder="Search" aria-label="Search"/>
+        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>

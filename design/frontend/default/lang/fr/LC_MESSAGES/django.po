@@ -19,4 +19,4 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: design/frontend/default/templates/home/index.html:13
 msgid "Welcome"
-msgstr ""
+msgstr "Bienvenue"

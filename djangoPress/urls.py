@@ -18,7 +18,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 
-from djangoPress.views import HomeIndex
+from djangoPress.views import HomeIndex, HeaderSearch
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
@@ -27,4 +27,5 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', HomeIndex.as_view(), name="home_index"),
+    path('search/', HeaderSearch.as_view(), name="search_header"),
 )

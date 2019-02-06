@@ -2,25 +2,21 @@
 
 {% load i18n %}
 
-{% block title %}Django Presse - Page D'accuille{% endblock %}
+{% block title %}Django Presse - {% trans 'HomePage' %}{% endblock %}
 
 {% block class_name %}page-index{% endblock %}
 
 {% block main_content %}
 
-    {% include 'base/header.html' %}
 
     <article>
         <header>
             <h3>{% trans 'Welcome' %}</h3>
         </header>
         <footer>
-            <p>
-
-            </p>
+            <p></p>
         </footer>
     </article>
 
-     {% include 'base/footer.html' %}
 
 {% endblock %}
