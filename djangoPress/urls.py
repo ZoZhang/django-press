@@ -13,12 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf.urls import url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 
-from djangoPress.views import HomeIndex, HeaderSearch
+from djangoPress.view.search import Search
+from djangoPress.view.home import HomeIndex
+from djangoPress.view.article import ArticleView
+from djangoPress.view.category import CategoryList
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
@@ -27,5 +30,11 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', HomeIndex.as_view(), name="home_index"),
-    path('search/', HeaderSearch.as_view(), name="search_header"),
+    path('category/<slug:word>', CategoryList.as_view(), name="category_list"),
+    path('article/<int:pk>', ArticleView.as_view(), name="article_view"),
+ # //   path('search/', Search.as_view(), name="search"),
+    path('search/', Search.start, name="search"),
 )
+
+
+
