@@ -1,0 +1,16 @@
+{% load i18n %}
+<nav class="col-md-6 mt-5 navbar navbar-expand-lg navbar-collapse" id="navbarSupportedContent">
+    <ul class="row">
+          <li class="nav-item">
+            <a class="nav-link" href="/">{% trans 'Home' %}</a>
+          </li>
+
+          {% for category in categorys %}
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_list' category.slug %}">{% trans category.name %}</a>
+              </li>
+
+          {% endfor %}
+    </ul>
+</nav>
