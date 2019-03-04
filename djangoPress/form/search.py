@@ -1,8 +1,14 @@
 from django import forms
 
+from djangoPress.model.article import Article
+
 
 class FormSearch(forms.ModelForm):
 
     class Meta:
-        pass
+        model = Article
+        fields = ['title']
+
+
+
 
