@@ -1,1 +1,36 @@
-search result
+{% extends 'base/common.html' %}
+
+{% load i18n %}
+
+{% block title %}Django Presse - {% trans 'Search Result' %}{% endblock %}
+
+{% block class_name %}search-result{% endblock %}
+
+{% block main_content %}
+
+    <div class="container text-left">
+
+        {% if result.count > 0 %}
+            <h2>{% trans 'Found'  %} {{ result.count }} {% trans 'records in article'  %} : </h2>
+
+            {% for object in result %}
+
+                <article class="mt-3">
+                    <header>
+                        <h3><a href="{% url 'article_view' object.pk %}">{{ object.title }}</a></h3>
+                        <a href="{% url 'article_view' object.pk %}"><img src="{{ object.image.url }}" width="540"/></a>
+                    </header>
+                    <footer>
+                        <h6 class="pt-2">{{ object.short_description }}</h6>
+                    </footer>
+                </article>
+
+             {% endfor %}
+
+        {% else %}
+           <p class="pt-5"><h3>{% trans "Sorry, I didn't find the article you wanted." %}</h3></p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

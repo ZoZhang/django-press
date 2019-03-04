@@ -1,4 +1,5 @@
 {% extends 'base/common.html' %}
+{% load news %}
 
 {% load i18n %}
 
@@ -9,14 +10,6 @@
 {% block main_content %}
 
 
-    <article>
-        <header>
-            <h3>{% trans 'Welcome' %}</h3>
-        </header>
-        <footer>
-            <p></p>
-        </footer>
-    </article>
-
+    {% news %}
 
 {% endblock %}

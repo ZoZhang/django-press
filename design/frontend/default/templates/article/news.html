@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<h1>{% trans 'Latest release' %}</h1>
+<div class="container text-left">
+ {% for object in news %}
+
+    <article class="mt-3">
+        <header>
+            <h5><a href="{% url 'article_view' object.pk %}">{{ object.title }}</a></h5>
+            <a href="{% url 'article_view' object.pk %}"><img src="{{ object.image.url }}" width="540"/></a>
+        </header>
+        <footer>
+            <h6 class="pt-2">{{ object.short_description }}</h6>
+        </footer>
+    </article>
+
+ {% empty %}
+    <h1>{% trans "There are currently no articles published" %}</h1>
+ {% endfor %}
+</div>
+

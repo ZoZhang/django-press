@@ -1,0 +1,27 @@
+{% extends 'base/common.html' %}
+
+{% load i18n %}
+
+{% block title %}Django Presse - {% trans 'Article View' %}{% endblock %}
+
+{% block class_name %}article-view{% endblock %}
+
+{% block main_content %}
+
+        <div class="container text-left">
+            <article>
+                <header>
+                    <h2>{{ object.title }}</h2>
+                    <i class="pr-3">{% trans 'Author' %}: {{ object.author }}</i>
+                    <i class="p-3">{% trans 'Update' %}: {{ object.updated_date }}</i>
+                    <i class="p-3">{% trans 'Publish' %}: {{ object.published_date }}</i>
+                </header>
+                <footer class="pt-2">
+                    <p><img class="img-fluid" src="{{ object.image.url }}"/></p>
+                    <p>{{ object.short_description }}</p>
+                    <p>{{ object.body }}</p>
+                </footer>
+            </article>
+        </div>
+
+{% endblock %}

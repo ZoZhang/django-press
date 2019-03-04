@@ -1,0 +1,28 @@
+{% extends 'base/common.html' %}
+
+{% load i18n %}
+
+{% block title %}Django Presse - {% trans 'Category List' %}{% endblock %}
+
+{% block class_name %}category-list{% endblock %}
+
+{% block main_content %}
+
+    <div class="container text-left">
+         {% for object in article_list %}
+
+            <article class="mt-3">
+                <header>
+                    <h3><a href="{% url 'article_view' object.pk %}">{{ object.title }}</a></h3>
+                    <a href="{% url 'article_view' object.pk %}"><img src="{{ object.image.url }}" width="540"/></a>
+                </header>
+                <footer>
+                    <h6 class="pt-2">{{ object.short_description }}</h6>
+                </footer>
+            </article>
+
+         {% empty %}
+            <h1>{% trans "There are currently no articles published" %}</h1>
+         {% endfor %}
+        </div>
+{% endblock %}
