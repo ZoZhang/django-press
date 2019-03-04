@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 09:37+0100\n"
+"POT-Creation-Date: 2019-03-04 04:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: design/frontend/default/templates/home/index.html:13
-msgid "Welcome"
+
+#: design/frontend/default/templates/article/news.html:3
+msgid "Latest release"
+msgstr ""
+
+#: design/frontend/default/templates/article/news.html:18
+#: design/frontend/default/templates/category/list.html:25
+msgid "There are currently no articles published"
+msgstr ""
+
+#: design/frontend/default/templates/article/view.html:5
+msgid "Article View"
+msgstr ""
+
+#: design/frontend/default/templates/article/view.html:15
+msgid "Author"
+msgstr ""
+
+#: design/frontend/default/templates/article/view.html:16
+msgid "Update"
+msgstr ""
+
+#: design/frontend/default/templates/article/view.html:17
+msgid "Publish"
+msgstr ""
+
+#: design/frontend/default/templates/base/navigation.html:4
+msgid "Home"
+msgstr ""
+
+#: design/frontend/default/templates/category/list.html:5
+msgid "Category List"
+msgstr ""
+
+#: design/frontend/default/templates/home/index.html:6
+msgid "HomePage"
+msgstr ""
+
+#: design/frontend/default/templates/search/header.html:12
+msgid "Search"
+msgstr ""
+
+#: design/frontend/default/templates/search/result.html:5
+msgid "Search Result"
+msgstr ""
+
+#: design/frontend/default/templates/search/result.html:14
+msgid "Found"
+msgstr ""
+
+#: design/frontend/default/templates/search/result.html:14
+msgid "records in article"
+msgstr ""
+
+#: design/frontend/default/templates/search/result.html:31
+msgid "Sorry, I didn't find the article you wanted."
 msgstr ""
