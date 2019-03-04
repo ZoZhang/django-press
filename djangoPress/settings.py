@@ -132,6 +132,10 @@ LANGUAGE_COOKIE_NAME = 'django_press_language'
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(THEME_FRONTEND_DIR, 'static', 'images', 'media')
+
+MEDIA_URL = '/static/images/media/'
+
 STATICFILES_DIRS = [
     os.path.join(THEME_FRONTEND_DIR, "static"),
 ]
